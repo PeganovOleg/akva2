@@ -34,7 +34,7 @@ $('.target').removeClass('target');
 }
 
 
-function endGame() {
+function endGame()  {
    
 
 
