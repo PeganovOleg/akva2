@@ -34,7 +34,7 @@ $('.target').removeClass('target');
 }
 
 
-function endGame()  {
+function endGame() {
    
 
 
@@ -64,8 +64,13 @@ if (Promah===0)
 
 
 
-  
+  $("#total-time-played12").hide();
+$("#total-time-played13").hide();
+$("#total-time-played14").hide();
+$("#total-time-played15").hide();
 
+
+  $("#button-reload").removeClass("d-none");
   $("#win-message").removeClass("d-none");
 
 $("#win-message2").removeClass("d-none");
@@ -119,10 +124,10 @@ function soundClick3() {
 
 
 function startRedirectionDelay(){
-    redirectionDelay = setTimeout(init2, 800);
+    redirectionDelay = setTimeout(init2, 750);
 }
 function startRedirectionDelay2(){
-    redirectionDelay = setTimeout(init2, 800);
+    redirectionDelay = setTimeout(init2, 750);
 }
 
 function resetRedirectionDelay(){
