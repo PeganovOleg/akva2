@@ -27,7 +27,7 @@
 }
 
 .miss {
-  background-color: #8B0000;
+  background-color: #357EC7;
 }
 
 body {
@@ -53,7 +53,7 @@ body {
 
 }
 .miss {
- background-color: #000080;
+ background-color: #357EC7;
  
 }
 
@@ -83,6 +83,12 @@ body {
  font-size: 20pt;
   text-align: center;
   color:#0000FF; 
+}
+
+.text-bottom4{
+ font-size: 20pt;
+  text-align: center;
+  color:red; 
 }
 
 

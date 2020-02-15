@@ -13,6 +13,8 @@ let Promah4="ПРОМАХИ НЕДОПУСТИМЫ!";
 
 function round() {
 
+  //resetRedirectionDelay();
+
    console.log(113);
 
 
@@ -27,10 +29,10 @@ $('.target').removeClass('target');
    $(divSelector).text(hits + 1);
    
 
-  if (hits===1) 
-  { 
-    firstHitTime = getTimestamp(); 
-  }
+  //if (hits===1) 
+ // { 
+  //  firstHitTime = getTimestamp(); 
+  //}
 
 
   
@@ -43,6 +45,44 @@ $('.target').removeClass('target');
  // startRedirectionDelay()
   
 }
+
+
+function round2() {
+
+  //resetRedirectionDelay();
+
+   console.log(11223);
+
+
+$('.target').removeClass('target');
+
+
+ 
+  
+  let divSelector = randomDivId();
+  console.log(divSelector);
+  $(divSelector).addClass("target");
+   $(divSelector).text(hits+1);
+   
+
+  //if (hits===1) 
+ // { 
+  //  firstHitTime = getTimestamp(); 
+  //}
+
+
+  
+  //if (hits === maxHits) {
+  //  resetRedirectionDelay2();
+  //  endGame();
+    
+ // }
+
+ // startRedirectionDelay()
+  
+}
+
+
 
 function endGame() {
    
@@ -69,8 +109,9 @@ if (Promah===0)
 
   
 
-  $("#total-time-played").text(totalPlayedSeconds);
+  $("#total-time-played").text(hits);
   $("#total-time-played2").text(hits2);
+
 
 
   
@@ -78,37 +119,90 @@ if (Promah===0)
   $("#win-message").removeClass("d-none");
 
 $("#win-message2").removeClass("d-none");
+soundClick3() ;
 
 }
 
 function handleClick(event) {
 
+//resetRedirectionDelay2();
 
-  console.log(event);
+  
+  console.log(118);
 
-  console.log(112);
-
-  console.log(event.target);
+  //console.log(event.target);
  
   if ($(event).hasClass("target")) { 
-    hits = hits + 1;
+   // hits = hits + 1;
 
     hits2=hits2+1;
-      $('.target').text('');
-    round();
+     // $('.target').text('');
+       soundClick();
+       //startRedirectionDelay();
+
+   // round();
+    //resetRedirectionDelay2();
+
+//console.log(e.target);
+//startRedirectionDelay();
+
   }
- // else { $(event).addClass('miss'); Promah=Promah+1;$('.target').text('');round();}
+  else {
+
+//startRedirectionDelay();
+$(event).addClass('miss'); 
+soundClick2();
+
+//glass.mp3
+
+    //hits = hits + 1;
+  //  hits2=hits2+1;
+  //  $('.target').text('');
+       //soundClick();
+//startRedirectionDelay();
+//startRedirectionDelay();
+  //  round();
+  //resetRedirectionDelay();
+
+//console.log(e.target);
+//
+//startRedirectionDelay();
+//startRedirectionDelay2();
+  }
 
 $("#total-time-played2").text(hits2);
 
+
+}
+
+function soundClick() {
+  var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = 'bul2.wav'; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
+}
+
+
+function soundClick2() {
+  var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = 'glass.mp3'; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
+}
+function soundClick3() {
+  var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = 'happy.mp3'; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
 }
 
 
 
 
 function startRedirectionDelay(){
-    redirectionDelay = setTimeout(init2, 1000);
+    redirectionDelay = setTimeout(init2, 950);
 }
+function startRedirectionDelay2(){
+    redirectionDelay = setTimeout(init2, 950);
+}
+
 function resetRedirectionDelay(){
     clearTimeout(redirectionDelay);
     startRedirectionDelay()
@@ -119,13 +213,36 @@ function resetRedirectionDelay2(){
    
 }
 
+function resetRedirectionDelay4(){
+    clearTimeout(redirectionDelay);
+   
+}
+
+
+
+
+
 function init2() {
+
   hits = hits + 1;
 
 $('.target').text('');
   
   round();
-  startRedirectionDelay()
+  resetRedirectionDelay()
+
+}
+
+
+
+function init3() {
+
+  //hits = hits + 1;
+
+$('.target').text('');
+  
+  round();
+  startRedirectionDelay2()
 
 }
 
@@ -161,10 +278,11 @@ console.log(116);
 
 $(".game-field").click(function(e) {
 
+//resetRedirectionDelay2();
 
   handleClick(e.target);
+  //soundClick();
 
-resetRedirectionDelay();
 
 //console.log(e.target);
 
