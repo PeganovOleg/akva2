@@ -15,73 +15,23 @@ function round() {
 
   //resetRedirectionDelay();
 
-   console.log(113);
+  
 
 
 $('.target').removeClass('target');
+//$('.miss').removeClass('miss');
 
 
  
   
   let divSelector = randomDivId();
   console.log(divSelector);
+  $(divSelector).removeClass('miss');
   $(divSelector).addClass("target");
    $(divSelector).text(hits + 1);
    
 
-  //if (hits===1) 
- // { 
-  //  firstHitTime = getTimestamp(); 
-  //}
-
-
-  
-  //if (hits === maxHits) {
-  //  resetRedirectionDelay2();
-  //  endGame();
-    
- // }
-
- // startRedirectionDelay()
-  
 }
-
-
-function round2() {
-
-  //resetRedirectionDelay();
-
-   console.log(11223);
-
-
-$('.target').removeClass('target');
-
-
- 
-  
-  let divSelector = randomDivId();
-  console.log(divSelector);
-  $(divSelector).addClass("target");
-   $(divSelector).text(hits+1);
-   
-
-  //if (hits===1) 
- // { 
-  //  firstHitTime = getTimestamp(); 
-  //}
-
-
-  
-  //if (hits === maxHits) {
-  //  resetRedirectionDelay2();
-  //  endGame();
-    
- // }
-
- // startRedirectionDelay()
-  
-}
-
 
 
 function endGame() {
@@ -123,61 +73,25 @@ soundClick3() ;
 
 }
 
+
+
 function handleClick(event) {
-
-//resetRedirectionDelay2();
-
-  
-  console.log(118);
-
-  //console.log(event.target);
-
  
   if ($(event).hasClass("target")) { 
-   // hits = hits + 1;
-soundClick();
+    soundClick();
     hits2=hits2+1;
-     // $('.target').text('');
-       
-       //startRedirectionDelay();
-
-   // round();
-    //resetRedirectionDelay2();
-
-//console.log(e.target);
-//startRedirectionDelay();
-
   }
   else {
+    soundClick2();
+    $(event).addClass('miss'); 
 
-//startRedirectionDelay();
-soundClick2();
-$(event).addClass('miss'); 
-
-
-//glass.mp3
-
-    //hits = hits + 1;
-    if (hits2>1){
-hits2=hits2-1;
-
+    if (hits2>0){
+     hits2=hits2-1;
     }
-   // hits2=hits2-1;
-  //  $('.target').text('');
-       //soundClick();
-//startRedirectionDelay();
-//startRedirectionDelay();
-  //  round();
-  //resetRedirectionDelay();
-
-//console.log(e.target);
-//
-//startRedirectionDelay();
-//startRedirectionDelay2();
+ 
   }
 
 $("#total-time-played2").text(hits2);
-
 
 }
 
@@ -186,8 +100,6 @@ function soundClick() {
   //audio.src = 'bul2.mp3'; // Указываем путь к звуку "клика"
   //audio.autoplay = true; // Автоматически запускаем
 new Audio('bul2.mp3').play()
-
-console.log(789);
 }
 
 //new Audio('./file.mp3').play()
@@ -207,10 +119,10 @@ function soundClick3() {
 
 
 function startRedirectionDelay(){
-    redirectionDelay = setTimeout(init2, 950);
+    redirectionDelay = setTimeout(init2, 750);
 }
 function startRedirectionDelay2(){
-    redirectionDelay = setTimeout(init2, 950);
+    redirectionDelay = setTimeout(init2, 750);
 }
 
 function resetRedirectionDelay(){

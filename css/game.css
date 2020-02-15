@@ -18,7 +18,7 @@
 
 .target1{
  
- background:url("3.png");
+ background:url("4.jpg");
   background-size:100% 100%;
   background-repeat: no-repeat ;
   color:white; 
@@ -35,10 +35,15 @@ body {
 
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .target {
-    background-size:100% 100%;
-   }  
+   background:url("heart2.png");
+  background-size:100% 100%;
+  background-repeat: no-repeat ;
+  color:white; 
+  font-size: 20pt;
+  text-align: center;
+}
 
    .target1 {
     background-size:100% 100%;
@@ -53,7 +58,14 @@ body {
 
 }
 .miss {
- background-color: #357EC7;
+  background:url("4.jpg");
+ background-size:100% 100%;
+  background-repeat: no-repeat ;
+  color:white; 
+  font-size: 20pt;
+  text-align: center;
+
+ 
  
 }
 
@@ -93,7 +105,28 @@ body {
 
 
 .text-bottom2{
- font-size: 8pt;
+ font-size: 12pt;
+  text-align: center;
+  color:#00008B; 
+}
+
+.text-bottom22{
+ font-size: 11pt;
   text-align: center;
   color:Snow; 
+}
+
+
+.text-bottom222{
+ font-size: 14pt;
+  text-align: center;
+  font-weight:bold;
+  color:Snow; 
+}
+
+.text-bottom2222{
+ font-size: 14pt;
+  text-align: center;
+  font-weight:bold;
+  color:black; 
 }
