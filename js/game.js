@@ -119,10 +119,10 @@ function soundClick3() {
 
 
 function startRedirectionDelay(){
-    redirectionDelay = setTimeout(init2, 850);
+    redirectionDelay = setTimeout(init2, 800);
 }
 function startRedirectionDelay2(){
-    redirectionDelay = setTimeout(init2, 850);
+    redirectionDelay = setTimeout(init2, 800);
 }
 
 function resetRedirectionDelay(){
