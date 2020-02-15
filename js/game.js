@@ -134,10 +134,10 @@ function handleClick(event) {
  
   if ($(event).hasClass("target")) { 
    // hits = hits + 1;
-
+soundClick();
     hits2=hits2+1;
      // $('.target').text('');
-       soundClick();
+       
        //startRedirectionDelay();
 
    // round();
@@ -150,8 +150,9 @@ function handleClick(event) {
   else {
 
 //startRedirectionDelay();
+    soundClick2();
 $(event).addClass('miss'); 
-soundClick2();
+
 
 //glass.mp3
 
