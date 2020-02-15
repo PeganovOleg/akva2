@@ -131,6 +131,7 @@ function handleClick(event) {
   console.log(118);
 
   //console.log(event.target);
+
  
   if ($(event).hasClass("target")) { 
    // hits = hits + 1;
@@ -150,14 +151,18 @@ soundClick();
   else {
 
 //startRedirectionDelay();
-    soundClick2();
+soundClick2();
 $(event).addClass('miss'); 
 
 
 //glass.mp3
 
     //hits = hits + 1;
-  //  hits2=hits2+1;
+    if (hits2>1){
+hits2=hits2-1;
+
+    }
+   // hits2=hits2-1;
   //  $('.target').text('');
        //soundClick();
 //startRedirectionDelay();
@@ -177,11 +182,15 @@ $("#total-time-played2").text(hits2);
 }
 
 function soundClick() {
-  var audio = new Audio(); // Создаём новый элемент Audio
-  audio.src = 'bul2.mp3'; // Указываем путь к звуку "клика"
-  audio.autoplay = true; // Автоматически запускаем
+  //var audio = new Audio(); // Создаём новый элемент Audio
+  //audio.src = 'bul2.mp3'; // Указываем путь к звуку "клика"
+  //audio.autoplay = true; // Автоматически запускаем
+new Audio('bul2.mp3').play()
+
+console.log(789);
 }
 
+//new Audio('./file.mp3').play()
 
 function soundClick2() {
   var audio = new Audio(); // Создаём новый элемент Audio
