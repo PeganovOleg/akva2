@@ -177,7 +177,7 @@ $("#total-time-played2").text(hits2);
 
 function soundClick() {
   var audio = new Audio(); // Создаём новый элемент Audio
-  audio.src = 'bul2.wav'; // Указываем путь к звуку "клика"
+  audio.src = 'bul2.mp3'; // Указываем путь к звуку "клика"
   audio.autoplay = true; // Автоматически запускаем
 }
 
