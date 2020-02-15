@@ -107,7 +107,7 @@ $("#total-time-played2").text(hits2);
 
 
 function startRedirectionDelay(){
-    redirectionDelay = setTimeout(init2, 500);
+    redirectionDelay = setTimeout(init2, 1000);
 }
 function resetRedirectionDelay(){
     clearTimeout(redirectionDelay);
