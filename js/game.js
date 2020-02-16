@@ -9,6 +9,7 @@ let Promah=0;
 let Promah2=" промахов((";
 let Promah3="Вы сделали ";
 let Promah4="ПРОМАХИ НЕДОПУСТИМЫ!";
+let Sekundy=0;
 
 
 function round() {
@@ -124,11 +125,54 @@ function soundClick3() {
 
 
 function startRedirectionDelay(){
-    redirectionDelay = setTimeout(init2, 750);
+
+console.log(Sekundy);
+if (Sekundy===0){
+  redirectionDelay = setTimeout(init2, 950);
+} 
+    
+if (Sekundy>0&&Sekundy<6){
+  console.log("третий");
+  redirectionDelay = setTimeout(init2, 700);
 }
+   
+   if (Sekundy>5&&Sekundy<11){
+    console.log("второй");
+  redirectionDelay = setTimeout(init2, 850);
+} 
+
+ if (Sekundy>10){
+  console.log("первый");
+  redirectionDelay = setTimeout(init2, 950);
+} 
+
+}
+
 function startRedirectionDelay2(){
-    redirectionDelay = setTimeout(init2, 750);
+console.log(Sekundy);
+
+if (Sekundy===0){
+  redirectionDelay = setTimeout(init2, 950);
+} 
+
+  if (Sekundy>0&&Sekundy<6){
+  redirectionDelay = setTimeout(init2, 700);
 }
+   
+   if (Sekundy>5&&Sekundy<11){
+  redirectionDelay = setTimeout(init2, 800);
+} 
+
+ if (Sekundy>10){
+  redirectionDelay = setTimeout(init2, 950);
+} 
+   
+
+
+   // redirectionDelay = setTimeout(init2, 750);
+}
+
+
 
 function resetRedirectionDelay(){
     clearTimeout(redirectionDelay);
@@ -186,7 +230,8 @@ var _Seconds = $('.seconds').text(),
 int = setInterval(function() { // запускаем интервал
   if (_Seconds > 0) {
     _Seconds--; // вычитаем 1
-    console.log(_Seconds);
+    Sekundy=_Seconds;
+ //   console.log(Sekundy);
     $('.seconds').text(_Seconds); // выводим получившееся значение в блок
   } else {
     clearInterval(int); // очищаем интервал, чтобы он не продолжал работу при _Seconds = 0
