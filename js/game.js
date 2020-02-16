@@ -10,15 +10,19 @@ let Promah2=" промахов((";
 let Promah3="Вы сделали ";
 let Promah4="ПРОМАХИ НЕДОПУСТИМЫ!";
 let Sekundy=0;
+let bitoeserdce=0;
+let schetchik=0;
+let sluchainoeChislo=0;
 
 
 
 function round() {
 
   //resetRedirectionDelay();
+  schetchik+=1;
 
-  
-
+if (sluchainoeChislo===schetchik)
+  {
 
 $('.target').removeClass('target');
 //$('.miss').removeClass('miss');
@@ -29,9 +33,34 @@ $('.target').removeClass('target');
   let divSelector = randomDivId();
   console.log(divSelector);
   $(divSelector).removeClass('miss');
-  $(divSelector).addClass("target");
+  $(divSelector).addClass("target2");
    $(divSelector).text(hits + 1);
     soundClick();
+
+  }
+
+  else{
+    $('.target').removeClass('target');
+
+$('.target2').removeClass('target2');
+//$('.miss').removeClass('miss');
+//$('.miss').removeClass('miss');
+
+
+ 
+  
+  let divSelector = randomDivId();
+  console.log(divSelector);
+  // $(divSelector).removeClass('target2');
+  $(divSelector).removeClass('miss');
+  $(divSelector).addClass("target");
+   $(divSelector).text(hits + 1);
+    soundClick();}
+
+
+
+
+
    
 
 }
@@ -85,12 +114,23 @@ soundClick3() ;
 
 
 function handleClick(event) {
+
+
+  if ($(event).hasClass("target2")) { 
+    soundClick();
+    hits2=0;
+    //$('.seconds').text(hits2);
+bitoeserdce=1;
+    endGame() 
+  }
  
-  if ($(event).hasClass("target")) { 
-   
+
+ if ($(event).hasClass("target")) { 
+    soundClick();
     hits2=hits2+1;
   }
   else {
+    
     soundClick2();
     $(event).addClass('miss'); 
 
@@ -99,6 +139,8 @@ function handleClick(event) {
     }
  
   }
+ 
+  
 
 $("#total-time-played2").text(hits2);
 
@@ -201,6 +243,7 @@ function init2() {
   hits = hits + 1;
 
 $('.target').text('');
+$('.target2').text('');
   
   round();
   resetRedirectionDelay()
@@ -214,6 +257,7 @@ function init3() {
   //hits = hits + 1;
 
 $('.target').text('');
+$('.target2').text('');
   
   round();
   startRedirectionDelay2()
@@ -233,7 +277,7 @@ function init() {
 var _Seconds = $('.seconds').text(),
   int;
 int = setInterval(function() { // запускаем интервал
-  if (_Seconds > 0) {
+  if (_Seconds > 0&&bitoeserdce===0) {
     _Seconds--; // вычитаем 1
     Sekundy=_Seconds;
  //   console.log(Sekundy);
@@ -245,6 +289,10 @@ int = setInterval(function() { // запускаем интервал
   }
 }, 1000);
 
+ let d = Math.floor(Math.random() *19) ;
+ sluchainoeChislo=d;
+
+ console.log(d);
 
 startRedirectionDelay();
 
@@ -283,8 +331,9 @@ $(".game-field").click(function(e) {
   $("#button-reload").click(function() {
 
     location.reload();
-    soundClick3() ;
+   // soundClick3() ;
   });
 }
 
-$(document).ready(init);
+$(document).ready(init());
+//soundClick3() ;

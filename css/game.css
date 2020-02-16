@@ -16,6 +16,16 @@
   text-align: center;
 }
 
+.target2 {
+ 
+ background:url("34.png");
+  background-size:100% 100%;
+  background-repeat: no-repeat ;
+  color:white; 
+  font-size: 20pt;
+  text-align: center;
+}
+
 .target1{
  
  background:url("4.jpg");
@@ -44,6 +54,17 @@ body {
   font-size: 20pt;
   text-align: center;
 }
+
+.target2 {
+ 
+ background:url("34.png");
+  background-size:100% 100%;
+  background-repeat: no-repeat ;
+  color:white; 
+  font-size: 20pt;
+  text-align: center;
+}
+
 
    .target1 {
     background-size:100% 100%;
