@@ -12,6 +12,7 @@ let Promah4="ПРОМАХИ НЕДОПУСТИМЫ!";
 let Sekundy=0;
 
 
+
 function round() {
 
   //resetRedirectionDelay();
@@ -30,6 +31,7 @@ $('.target').removeClass('target');
   $(divSelector).removeClass('miss');
   $(divSelector).addClass("target");
    $(divSelector).text(hits + 1);
+    soundClick();
    
 
 }
@@ -76,6 +78,7 @@ $("#total-time-played15").hide();
 
 $("#win-message2").removeClass("d-none");
 soundClick3() ;
+ clearTimeout(redirectionDelay);
 
 }
 
@@ -84,7 +87,7 @@ soundClick3() ;
 function handleClick(event) {
  
   if ($(event).hasClass("target")) { 
-    soundClick();
+   
     hits2=hits2+1;
   }
   else {
@@ -102,23 +105,23 @@ $("#total-time-played2").text(hits2);
 }
 
 function soundClick() {
-  //var audio = new Audio(); // Создаём новый элемент Audio
-  //audio.src = 'bul2.mp3'; // Указываем путь к звуку "клика"
-  //audio.autoplay = true; // Автоматически запускаем
-new Audio('bul2.mp3').play()
+  var audio1 = new Audio(); // Создаём новый элемент Audio
+  audio1.src = 'bul2.mp3'; // Указываем путь к звуку "клика"
+  audio1.autoplay = true; // Автоматически запускаем
+//new Audio('bul2.mp3').play()
 }
 
 //new Audio('./file.mp3').play()
 
 function soundClick2() {
-  var audio = new Audio(); // Создаём новый элемент Audio
-  audio.src = 'glass.mp3'; // Указываем путь к звуку "клика"
-  audio.autoplay = true; // Автоматически запускаем
+  var audio2 = new Audio(); // Создаём новый элемент Audio
+  audio2.src = 'glass.mp3'; // Указываем путь к звуку "клика"
+  audio2.autoplay = true; // Автоматически запускаем
 }
 function soundClick3() {
-  var audio = new Audio(); // Создаём новый элемент Audio
-  audio.src = 'happy.mp3'; // Указываем путь к звуку "клика"
-  audio.autoplay = true; // Автоматически запускаем
+  var audio3 = new Audio(); // Создаём новый элемент Audio
+  audio3.src = 'happy.mp3'; // Указываем путь к звуку "клика"
+  audio3.autoplay = true; // Автоматически запускаем
 }
 
 
@@ -225,6 +228,8 @@ $('.target').text('');
 function init() {
 
 
+
+
 var _Seconds = $('.seconds').text(),
   int;
 int = setInterval(function() { // запускаем интервал
@@ -245,10 +250,12 @@ startRedirectionDelay();
 
 console.log(116);
 
+
   round();
 //$(".game-field").click(handleClick);
 
 $(".game-field").click(function(e) {
+  //soundClick();
 
 //resetRedirectionDelay2();
 
@@ -274,7 +281,9 @@ $(".game-field").click(function(e) {
 //});
 
   $("#button-reload").click(function() {
+
     location.reload();
+    soundClick3() ;
   });
 }
 
