@@ -173,22 +173,22 @@ function startRedirectionDelay(){
 
 console.log(Sekundy);
 if (Sekundy===0){
-  redirectionDelay = setTimeout(init2, 750);
+  redirectionDelay = setTimeout(init2, 780);
 } 
     
 if (Sekundy>0&&Sekundy<6){
   console.log("третий");
-  redirectionDelay = setTimeout(init2, 450);
+  redirectionDelay = setTimeout(init2, 480);
 }
    
    if (Sekundy>5&&Sekundy<11){
     console.log("второй");
-  redirectionDelay = setTimeout(init2, 550);
+  redirectionDelay = setTimeout(init2, 580);
 } 
 
  if (Sekundy>10){
   console.log("первый");
-  redirectionDelay = setTimeout(init2, 750);
+  redirectionDelay = setTimeout(init2, 780);
 } 
 
 }
@@ -197,19 +197,19 @@ function startRedirectionDelay2(){
 console.log(Sekundy);
 
 if (Sekundy===0){
-  redirectionDelay = setTimeout(init2, 750);
+  redirectionDelay = setTimeout(init2, 780);
 } 
 
   if (Sekundy>0&&Sekundy<6){
-  redirectionDelay = setTimeout(init2, 450);
+  redirectionDelay = setTimeout(init2, 480);
 }
    
    if (Sekundy>5&&Sekundy<11){
-  redirectionDelay = setTimeout(init2, 550);
+  redirectionDelay = setTimeout(init2, 580);
 } 
 
  if (Sekundy>10){
-  redirectionDelay = setTimeout(init2, 750);
+  redirectionDelay = setTimeout(init2, 780);
 } 
    
 
