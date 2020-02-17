@@ -178,7 +178,7 @@ if (Sekundy===0){
     
 if (Sekundy>0&&Sekundy<6){
   console.log("третий");
-  redirectionDelay = setTimeout(init2, 480);
+  redirectionDelay = setTimeout(init2, 490);
 }
    
    if (Sekundy>5&&Sekundy<11){
@@ -201,7 +201,7 @@ if (Sekundy===0){
 } 
 
   if (Sekundy>0&&Sekundy<6){
-  redirectionDelay = setTimeout(init2, 480);
+  redirectionDelay = setTimeout(init2, 490);
 }
    
    if (Sekundy>5&&Sekundy<11){
